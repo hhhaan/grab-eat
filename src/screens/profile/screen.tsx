@@ -19,7 +19,7 @@ export function ProfileScreen() {
 
     return (
         <Layout>
-            <div className="max-w-4xl mx-auto px-4 py-8 ">
+            <div className=" ">
                 {/* Profile Header */}
                 <div className="flex items-center gap-6 mb-8">
                     <div className="w-16 h-16 rounded-full overflow-hidden shadow-md">
