@@ -21,3 +21,32 @@ export const GET_RESTAURANTS = gql`
         }
     }
 `;
+
+export const GET_RESTAURANT_BY_ID = gql`
+    query GetRestaurantById($id: Int!) {
+        restaurantCollection(filter: { id: { eq: $id } }) {
+            edges {
+                node {
+                    id
+                    name
+                    description
+                    cuisine_type
+                    address
+                    opening_hours
+                    closing_hours
+
+                    restaurant_imageCollection {
+                        edges {
+                            node {
+                                id
+                                image_url
+                                image_description
+                                is_primary
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`;
