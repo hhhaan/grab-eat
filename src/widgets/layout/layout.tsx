@@ -2,7 +2,7 @@
 
 import { Navigation } from '../navigation';
 import { Bell, Search, ShoppingBag } from 'lucide-react';
-// import '@/src/shared/lib/vendor/vendor.ts';
+import '@/src/shared/lib/vendor/vendor.ts';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
