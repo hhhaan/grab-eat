@@ -3,9 +3,10 @@
 import { Layout } from '@/src/widgets/layout';
 import { useUserStore } from '@/src/entities/user/model/store';
 import Image from 'next/image';
-
+import { useRouter } from 'next/navigation';
 export function ProfileScreen() {
     const { userInfo, signOut, loading } = useUserStore();
+    const router = useRouter();
 
     if (loading) {
         return (
@@ -115,7 +116,10 @@ export function ProfileScreen() {
                             </span>
                         </button>
 
-                        <button className="w-full py-3 flex justify-between items-center text-left border-t border-gray-100">
+                        <button
+                            className="w-full py-3 flex justify-between items-center text-left border-t border-gray-100"
+                            onClick={() => router.push('/profile/favorites')}
+                        >
                             <span className="font-medium">즐겨찾기</span>
                             <span className="text-gray-400">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
